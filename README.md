@@ -3,7 +3,9 @@
 This documentation provides information about the NichiCDX console application, which allows users to find prime numbers within a specified range.
 
 Created by            : Rafie Restu Ramadhani
+
 School Origin         : SMKN 4 TANGERANG
+
 Programming Language  : Kotlin
 
 ## Table of Contents
@@ -57,7 +59,7 @@ Prime numbers between 25 and 50 are:
 
 The program will display all prime numbers that fall within the `start` and `end` range.
 
-### 4. Errors
+## Errors
 
 The program will provide error messages and prompt the user to enter valid `start` and `end` values if:
 
@@ -90,10 +92,21 @@ Invalid input. The start value must be less than the end value.
 | Invalid input. Both start and end values must be greater than 1. | Either `start` or `end` is less than or equal to 1. |
 | Invalid input. The start value must be less than the end value. | `start` is greater than or equal to `end`.     |
 
-### 5. Code Structure
+## Code Structure
 
 | Function                   | Description                                                                                              |
 | -------------------------- | -------------------------------------------------------------------------------------------------------- |
 | `main()`                   | The main function that controls the program flow. It prompts the user to input `start` and `end` values, checks the input's validity, and displays prime numbers within the specified range. |
 | `readInt(prompt: String): Int?` | A helper function that reads user input and returns an `Int` value if the input is valid or `null` if it's not. |
 | `isPrime(n: Int): Boolean` | A function that checks whether a number `n` is prime or not.                                            |
+
+## `isPrime()` Function
+
+The `isPrime()` function checks whether a given integer `n` is a prime number or not. Here's how it works:
+
+- If `n` is less than or equal to 1, the function returns `false` because prime numbers must be greater than 1.
+- If `n` is 2 or 3, the function returns `true` since 2 and 3 are prime numbers.
+- If `n` is divisible by 2 or 3, the function returns `false`, as divisible numbers are not prime.
+- The function employs a more efficient algorithm to check for prime numbers. It iterates from 5 to the square root of `n` with a step of 6.
+- During this iteration, if `n` is divisible by any number in this range, the function returns `false`.
+- If `n` is not divisible by any number in the specified range, it is considered a prime number, and the function returns `true`.
