@@ -90,4 +90,10 @@ Invalid input. The start value must be less than the end value.
 | Invalid input. Both start and end values must be greater than 1. | Either `start` or `end` is less than or equal to 1. |
 | Invalid input. The start value must be less than the end value. | `start` is greater than or equal to `end`.     |
 
+### 5. Code Structure
 
+| Function                   | Description                                                                                              |
+| -------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `main()`                   | The main function that controls the program flow. It prompts the user to input `start` and `end` values, checks the input's validity, and displays prime numbers within the specified range. |
+| `readInt(prompt: String): Int?` | A helper function that reads user input and returns an `Int` value if the input is valid or `null` if it's not. |
+| `isPrime(n: Int): Boolean` | A function that checks whether a number `n` is prime or not.                                            |
