@@ -1,7 +1,5 @@
 # SMKDEV Coding Challenge
 
-This documentation provides information about the NichiCDX console application, which allows users to find prime numbers within a specified range.
-
 Created by            : Rafie Restu Ramadhani
 
 School Origin         : SMKN 4 TANGERANG
